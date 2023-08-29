@@ -1,4 +1,4 @@
-package com.dsa.arrayandstrings;
+package com.dsa.arrays;
 
 public class SecondLargestElementInArray
 {
