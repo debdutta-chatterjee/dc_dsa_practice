@@ -1,5 +1,6 @@
 package stringTest;
 
+import com.dsa.strings.BeautifulString;
 import com.dsa.strings.EncodeTheMessage;
 import com.dsa.strings.ReverseStringWordWise;
 import org.testng.Assert;
@@ -38,4 +39,15 @@ public class StringTest
                         "abbdcaas"),
                 "a1b2d1c1a2s1");
     }
+
+    @Test
+    public void testBeautifulString() {
+        // Test cases
+        Assert.assertEquals(BeautifulString.makeBeautiful("010101"), 0); // Already beautiful
+        Assert.assertEquals(BeautifulString.makeBeautiful("11111"), 2);   // Needs 2 operations
+        Assert.assertEquals(BeautifulString.makeBeautiful("0000"), 2);    // Needs 2 operations
+        Assert.assertEquals(BeautifulString.makeBeautiful("00100"), 2);   // Needs 1 operation
+        Assert.assertEquals(BeautifulString.makeBeautiful("1111000011"), 5); // Needs 4 operations
+    }
+
 }
